@@ -7,4 +7,4 @@ cd $HOME/hlserver
 #                               +game_mode $GAME_MODE \
 #                               +mapgroup $MAPGROUP \
 #                               +map $MAP  $STARTUP_OPTIONS
-csgo/srcds_run -game csgo -tickrate 128 -autoupdate -steam_dir ~/hlserver -steamcmd_script ~/hlserver/csgo_ds.txt $@
+./csgo/srcds_run -game csgo -tickrate 128 -autoupdate -steam_dir ~/hlserver -steamcmd_script ~/hlserver/csgo_ds.txt $@
