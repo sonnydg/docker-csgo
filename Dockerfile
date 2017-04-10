@@ -28,7 +28,8 @@ USER $USER
 RUN curl http://media.steampowered.com/installer/steamcmd_linux.tar.gz | tar -C $SERVER -xvz
 RUN chmod +x $SERVER/update.sh
 
-RUN .$SERVER/update.sh
+WORKDIR $SERVER
+RUN ./update.sh
 
 #Server config
 EXPOSE 27015
