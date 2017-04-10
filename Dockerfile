@@ -1,4 +1,4 @@
-FROM ubuntu
+FROM phusion/baseimage
 MAINTAINER brekan.net
 
 #Ubuntu requirements
