@@ -35,6 +35,6 @@ RUN chmod +x $SERVER/start.sh
 
 #Server Start
 WORKDIR /home/$USER/hlserver
-RUN ./update.sh
+RUN $SERVER./update.sh
 ENTRYPOINT ["./start.sh"]
 CMD ["-console" "-usercon" "+game_type" "0" "+game_mode" "1" "+mapgroup" "mg_active" "+map" "de_cache"]
