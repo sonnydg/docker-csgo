@@ -26,9 +26,9 @@ RUN chown -R $USER:$USER $SERVER
 USER $USER
 
 RUN curl http://media.steampowered.com/installer/steamcmd_linux.tar.gz | tar -C $SERVER -xvz
-#RUN chmod +x $SERVER/update.sh
+RUN chmod +x $SERVER/update.sh
 
-RUN $SERVER/steamcmd.sh +runscript csgo_ds.txt
+RUN .$SERVER/update.sh
 
 #Server config
 EXPOSE 27015
