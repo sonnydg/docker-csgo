@@ -16,9 +16,9 @@ RUN chown $USER:$USER $HOME
 ENV SERVER $HOME/hlserver
 RUN mkdir $SERVER
 
-ADD ./csgo_ds.txt $SERVER/csgo_ds.txt
-ADD ./update.sh $SERVER/update.sh
-ADD ./start.sh $SERVER/start.sh
+ADD csgo_ds.txt $SERVER/csgo_ds.txt
+ADD update.sh $SERVER/update.sh
+ADD start.sh $SERVER/start.sh
 
 RUN chown -R $USER:$USER $SERVER
 
