@@ -7,7 +7,7 @@ RUN apt-get -y update && \
 
 ENV USER root
 
-RUN useradd $USER
+#RUN useradd $USER
 ENV HOME /home/$USER
 RUN mkdir $HOME
 RUN chown $USER:$USER $HOME
