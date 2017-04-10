@@ -16,9 +16,9 @@ RUN chown $USER:$USER $HOME
 ENV SERVER $HOME/hlserver
 RUN mkdir $SERVER
 
-ADD csgo_ds.txt $SERVER/csgo_ds.txt
-ADD update.sh $SERVER/update.sh
-ADD start.sh $SERVER/start.sh
+ADD ./csgo_ds.txt $SERVER/csgo_ds.txt
+ADD ./update.sh $SERVER/update.sh
+ADD ./start.sh $SERVER/start.sh
 
 RUN chown -R $USER:$USER $SERVER
 
@@ -27,9 +27,10 @@ USER $USER
 
 RUN curl http://media.steampowered.com/installer/steamcmd_linux.tar.gz | tar -C $SERVER -xvz
 RUN chmod +x $SERVER/update.sh
+RUN .$SERVER/update.sh
+#WORKDIR $SERVER
+#RUN ./update.sh
 
-WORKDIR $SERVER
-RUN ./update.sh
 
 #Server config
 EXPOSE 27015
