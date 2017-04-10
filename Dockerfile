@@ -27,7 +27,6 @@ USER $USER
 
 RUN curl http://media.steampowered.com/installer/steamcmd_linux.tar.gz | tar -C $SERVER -xvz
 #RUN chmod +x $SERVER/update.sh
-CMD ["$SERVER/update.sh"]
 
 #Server config
 EXPOSE 27015
@@ -36,5 +35,6 @@ RUN chmod +x $SERVER/start.sh
 
 #Server Start
 WORKDIR /home/$USER/hlserver
+CMD ["./update.sh"]
 ENTRYPOINT ["./start.sh"]
 CMD ["-console" "-usercon" "+game_type" "0" "+game_mode" "1" "+mapgroup" "mg_active" "+map" "de_cache"]
