@@ -3,7 +3,6 @@ MAINTAINER brekan.net
 
 #Ubuntu requirements
 RUN apt-get -y update && \ 
-    DEBIAN_FRONTEND=noninteractive && \
     apt-get -y install  ca-certificates lib32gcc1 net-tools lib32stdc++6 lib32z1 lib32z1-dev curl 
 
 ENV USER steam
